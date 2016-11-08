@@ -1,0 +1,13 @@
+s3-sync:
+  image: turistforeningen/s3-sync
+  tags:
+    - app
+  volumes_from:
+    - secrets
+
+secrets:
+  image: turistforeningen/s3-sync-secrets:v1
+  tags:
+    - app
+  volumes:
+    - /secrets
