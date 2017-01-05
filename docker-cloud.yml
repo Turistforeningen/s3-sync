@@ -4,6 +4,7 @@ s3-sync:
     - app
   volumes_from:
     - secrets
+  autoredeploy: true
 
 secrets:
   image: turistforeningen/s3-sync-secrets:v1
@@ -11,3 +12,4 @@ secrets:
     - app
   volumes:
     - /secrets
+  autoredeploy: true
